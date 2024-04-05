@@ -1,7 +1,0 @@
-Como juntar html y css:
-    - Internal: 
-    - Crear un archivo HTML llamado 
-        - <style> </style>
-        -(mala practica): <tag style="propiedad valor">
-        -External: 
-            un archivo nuevo .css  (Forma favorita)
