@@ -5,11 +5,40 @@
     text-decoration: none;
 }
 
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: 'Lato';
+    color: white;
+    font-size: 12px;
+    background-color: #101010;
+}
+
+.icono-carrito {
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+
 .header {
     width: 100%;
     height: 80px;
-    display: block;
+    display: flex;
     background-color: #101010;
+    justify-content: space-between;
+}
+
+img {
+    max-width: 100%;
+    display: block; /* Asegura que la imagen no tenga espacio extra debajo */
+}
+
+.container-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espacio entre las imágenes */
+    padding: 20px; /* Espacio alrededor de los elementos dentro del contenedor */
+    font-weight: lighter;
 }
 
 .header-interior {
@@ -22,14 +51,12 @@
 }
 
 .logo-contenedor a {
-    height: 100%;
     display: table;
     float: left;
 }
 
 .logo-contenedor h1 {
     color: white;
-    height: 100%;
     display: table-cell;
     vertical-align: bottom;
     font-family: 'MedievalSharp';
@@ -43,11 +70,9 @@
 
 .navigation {
     float: right;
-    height: 100%;
 }
 
 .navigation a {
-    height: 100%;
     display: table;
     float: left;
     padding: 0px 20px;
@@ -56,32 +81,32 @@
 .navigation a li {
     display: table-cell;
     vertical-align: middle;
-    height: 100%;
     color: white;
     font-size: 16px;
 }
 
-@media only screen and (max-width: 100px) {
-    .header-interior {
-        flex-direction: column;
-        align-items: stretch;
+@media only screen and (max-width: 1000px) { /* Ajusta este breakpoint según necesidad */
+    .container-items {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para pantallas más pequeñas */
     }
+}
 
-    .logo-contenedor {
-        margin-bottom: 5px;
-    }
-
-    .navigation {
-        float: none;
-        margin-top: 5px;
+@media only screen and (max-width: 600px) { /* Ajusta este breakpoint según necesidad */
+    .container-items {
+        grid-template-columns: 1fr; /* 1 columna para pantallas muy pequeñas */
     }
 
     .navigation a {
-        float: none;
-        display: block;
-        text-align: center;
+        padding: 10px 5px; /* Menor padding para los enlaces en pantallas pequeñas */
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center; /* Centra los elementos del header en pantallas pequeñas */
+    }
+
+    .header-interior {
+        justify-content: center;
         padding: 10px 0;
-        width: 100%;
-        box-sizing: border-box; 
     }
 }
