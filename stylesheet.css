@@ -30,14 +30,13 @@ body {
 
 img {
     max-width: 100%;
-    display: block; /* Asegura que la imagen no tenga espacio extra debajo */
-}
+    display: block;}
 
 .container-items {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 20px; /* Espacio entre las imágenes */
-    padding: 20px; /* Espacio alrededor de los elementos dentro del contenedor */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
     font-weight: lighter;
 }
 
@@ -85,24 +84,24 @@ img {
     font-size: 16px;
 }
 
-@media only screen and (max-width: 1000px) { /* Ajusta este breakpoint según necesidad */
+@media only screen and (max-width: 1000px) { 
     .container-items {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas para pantallas más pequeñas */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media only screen and (max-width: 600px) { /* Ajusta este breakpoint según necesidad */
+@media only screen and (max-width: 600px) {
     .container-items {
-        grid-template-columns: 1fr; /* 1 columna para pantallas muy pequeñas */
+        grid-template-columns: 1fr;
     }
 
     .navigation a {
-        padding: 10px 5px; /* Menor padding para los enlaces en pantallas pequeñas */
+        padding: 10px 5px;
     }
 
     .header {
         flex-direction: column;
-        align-items: center; /* Centra los elementos del header en pantallas pequeñas */
+        align-items: center;
     }
 
     .header-interior {
