@@ -298,12 +298,36 @@ h1 {
     .container-items {
         grid-template-columns: repeat(2, 1fr);
     }
+    .container-icon {
+        position: static;
+    }
 }
 
-@media only screen and (max-width: 325px) {
+
+@media only screen and (max-width: 200px) {
     .container-items {
         grid-template-columns: 1fr;
     }
+
+    .container-icon {
+        position: static; 
+        margin-top: 10px; 
+    }
+
+    .count-products {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%);
+        background-color: #101010;
+        color: white;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
 
     .navigation a {
         padding: 10px 5px;
