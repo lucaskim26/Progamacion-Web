@@ -9,82 +9,97 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
-        <div class="header-interior">
-            <div class="logo-contenedor">
-                <a href="index.html">
-                    <h1><span>Abstract</span> Designs</h1>
-                </a>                
+    <header>
+        <a href="index.html">
+            <h1><span>Abstract</span> Designs</h1>
+        </a>                
+        <div class="container-icon">
+            <div class="container-cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                  </svg> 
+                  <div class="count-products">
+                    <span id="contador-productos">0</span>
+                  </div>
             </div>
-            <ul class="navigation">
-                <a href="shop.html"><li>Shop</li></a>
-                <a href="faqs.html"><li>Faqs</li></a>
-                <a href="info.html"><li>Sobre Nosotros</li></a>
-                <a href="ptos-retiro.html"><li>Puntos de retiro</li></a>
-            </ul>
-            <a href="">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icono-carrito">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                </svg>
-            </a>
+              <div class="container-cart-products hidden-cart">
+                <div class="row-product">
+                    <div class="cart-product">
+                        <div class="info-cart-product">
+                            <span class="cantidad-producto-carrito">1</span>
+                            <p class="titulo-producto-carrito">Remera oversize: "Icarus"</p>
+                            <p class="precio-carrito-producto">$1</p>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                          </svg>
+                    </div>
+                </div>
+
+                <div class="cart-total">
+                    <h3>Total:</h3>
+                    <span class="total-pagar">$10</span>
+                </div>
+   
         </div>
-    </div>
+    </header>
 
     <div class="container-items"> 
         <div class="item">
             <figure>
-                <img src="Image/Remera-Icarus.png" alt="">
+                <img src="Image/Remera-Icarus.png" alt="Remera Icarus">
             </figure>
             <div class="info-product">
                 <h2>Remera Oversize: "Icarus"</h2>
                 <p class="price">$1</p>
-                <button>Añadir al carrito</button>
+                <button class="btn-add-cart">Añadir al carrito</button>
             </div>
         </div>
 
         <div class="item">
             <figure>
-                <img src="Image/Remera- life.png" alt="">
+                <img src="Image/Remera- life.png" alt="Remera Life">
             </figure>
             <div class="info-product">
                 <h2>Remera Oversize: "Life"</h2>
                 <p class="price">$1</p>
-                <button>Añadir al carrito</button>
+                <button class="btn-add-cart">Añadir al carrito</button>
             </div>
         </div>
 
         <div class="item">
             <figure>
-                <img src="Image/Hoodie-life.png" alt="">
+                <img src="Image/Hoodie-life.png" alt="Hoodie Life">
             </figure>
             <div class="info-product">
                 <h2>Hoodie Oversize: "Life"</h2>
                 <p class="price">$1</p>
-                <button>Añadir al carrito</button>
+                <button class="btn-add-cart">Añadir al carrito</button>
             </div>
         </div>
 
         <div class="item">
             <figure>
-                <img src="Image/Remera- Selfesteem.png" alt="">
+                <img src="Image/Remera- Selfesteem.png" alt="Remera Selfesteem">
             </figure>
             <div class="info-product">
                 <h2>Remera Oversize: "Self esteem"</h2>
                 <p class="price">$1</p>
-                <button>Añadir al carrito</button>
+                <button class="btn-add-cart">Añadir al carrito</button>
             </div>
         </div>
 
         <div class="item">
             <figure>
-                <img src="Image/Remera-Ruleno1.png" alt="">
+                <img src="Image/Remera-Ruleno1.png" alt="Remera Rule no1">
             </figure>
             <div class="info-product">
                 <h2>Remera Oversize: "Rule no.1"</h2>
                 <p class="price">$1</p>
-                <button>Añadir al carrito</button>
+                <button class="btn-add-cart">Añadir al carrito</button>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
