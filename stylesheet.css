@@ -257,36 +257,20 @@ h1 {
     font-size: 16px;
 }
 
-.faqs h2{
-    margin-left: none;
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 15px;
+.faq-section {
+    margin: 20px 0;
+    border: 1px solid black;
+    border-radius: 5px;
 }
-
-.faqs h3{
-    font-size: 20px;
-    margin-top: 10px;
-    margin-left: 1.5%;
+.faq-title {
+    padding: 10px;
+    cursor: pointer;
+    background-color: black;
+    border-bottom: 1px solid #ccc;
 }
-
-.faqs ol li{
-    margin-left: 2.5%;
-    font-size: 14px;
-    margin-top: 10px;
-    justify-content: left;
-}
-
-.faqs ul li{
-    margin-left: 3.5%;
-    font-size: 14px;
-    margin-top: 10px;
-    justify-content: left;
-}
-
-.faqs p{
-    margin-top: 12px;
-    margin-left: 3.5%;
+.faq-content {
+    padding: 10px;
+    display: none;
 }
 
 .cart-empty{

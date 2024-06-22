@@ -1,3 +1,4 @@
+// Mostrar/ocultar carrito
 const btnCart = document.querySelector('.container-cart-icon');
 const containercartproducts = document.querySelector('.container-cart-products');
 
@@ -6,7 +7,7 @@ btnCart.addEventListener('click', () => {
 });
 
 /* ============================================ */
-const cartInfo = document.querySelector('.cart-product');
+// Elementos del carrito
 const rowProduct = document.querySelector('.row-product');
 
 // Lista de todos los contenedores de productos
@@ -18,6 +19,7 @@ let allproducts = [];
 const valortotal = document.querySelector('.total-pagar');
 const countProducts = document.querySelector('#contador-productos');
 
+// Añadir producto al carrito
 productlist.addEventListener('click', e => {
     if (e.target.classList.contains('btn-add-cart')) {
         const product = e.target.parentElement;
@@ -27,7 +29,9 @@ productlist.addEventListener('click', e => {
             title: product.querySelector('h2').textContent,
             price: product.querySelector('p').textContent,
         };
+
         const exists = allproducts.some(product => product.title === infoProduct.title);
+
         if (exists) {
             const products = allproducts.map(product => {
                 if (product.title === infoProduct.title) {
@@ -41,23 +45,41 @@ productlist.addEventListener('click', e => {
         } else {
             allproducts = [...allproducts, infoProduct];
         }
+
         if (containercartproducts.classList.contains('hidden-cart')) {
             containercartproducts.classList.remove('hidden-cart');
         }
+        
         showhtml();
     }
 });
 
+// Eliminar o restar producto del carrito
 rowProduct.addEventListener('click', (e) => {
     if (e.target.classList.contains('icon-close')) {
-        const product = e.target.parentElement;
-        const title = product.querySelector('p').textContent;
+        console.log('Icon close clicked');
+        const productElement = e.target.closest('.cart-product'); // Usa closest para asegurarte de seleccionar correctamente el elemento
+        const title = productElement.querySelector('.titulo-producto-carrito').textContent;
 
-        allproducts = allproducts.filter(product => product.title !== title);
+        console.log('Product title:', title);
+
+        const product = allproducts.find(product => product.title === title);
+
+        if (product) {
+            if (product.quantity > 1) {
+                product.quantity--;
+            } else {
+                allproducts = allproducts.filter(product => product.title !== title);
+            }
+        } else {
+            console.log('Product not found in cart');
+        }
+
         showhtml();
     }
 });
 
+// Mostrar el HTML del carrito
 const showhtml = () => {
     rowProduct.innerHTML = '';
 
@@ -80,8 +102,8 @@ const showhtml = () => {
         `;
 
         rowProduct.append(containerproduct);
-        total = total + parseInt(product.quantity * product.price.slice(1));
-        totalofproducts = totalofproducts + product.quantity;
+        total += parseInt(product.quantity * product.price.slice(1));
+        totalofproducts += product.quantity;
     });
 
     if (!allproducts.length) {
